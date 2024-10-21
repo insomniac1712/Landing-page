@@ -6,6 +6,7 @@ body{
 .Hero,.footer{
     background-color: #1F2937;
     color: #F9FAF8;
+    box-shadow:5px 5px 10px black;
 }
 
 .top{
@@ -34,6 +35,32 @@ body{
     padding-left: 20px;
 
 }
+
+.links a{
+    position: relative;
+    text-decoration: none;
+    color: #333; 
+    padding-bottom: 2px; 
+  }
+  
+.links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(9, 108, 128);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+.links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
 
 .links a{
     text-decoration: none;
@@ -72,21 +99,29 @@ body{
 
 .button{
     background-color: #3882F6;
-    border-color: #3882F6 transparent;
+    /* border-color: #3882F6 transparent; */
     border-radius: 5px;
     color: #E5E7Eb;
     height: 25px;
     font-weight: 550;
     width: 70px;
+    box-shadow: 0 0 5px black;
+}
+button:hover{
+    background-color: #E5E7Eb;
+    color: #3882F6;
+    box-shadow: #1F2937;
+    /* animation: forwards; */
+
+
 }
 
 .image{
     margin-bottom: 100px;
     background-color: #E5E7Eb;
-    height: 140px;
+    height: 240px;
     width: 500px;
-    text-align: center;
-    box-shadow: #E5E7Eb;
+    align-self: center;
     color: #1F2937;
 }
 
